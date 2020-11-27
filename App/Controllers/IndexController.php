@@ -13,7 +13,7 @@ use App\Models\Produto;
 class IndexController extends Action {
 
 	public function index() {
-		$produto = Container::getModel('Produto');
+		$produto = Container::getModel('Produto');	
 		$produtos = $produto->getProdutos();
 		$this->view->dados = $produtos;
 

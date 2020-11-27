@@ -75,5 +75,10 @@ class Cliente {
         return $this->db->query($query)->fetchAll();
     }
 
+    public function validaLogin($cliente) {
+        $query = "SELECT * FROM tb_clientes WHERE email = '".$cliente->getEmail()."' AND senha = '".$cliente->getSenha()."'";
+        return $this->db->query($query)->fetchAll();
+    }
+
 } 
 ?>

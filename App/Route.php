@@ -86,6 +86,31 @@ class Route extends Bootstrap {
 			'action' => 'excluirCliente'
 		);
 
+		$routes['loginCliente'] = array(
+			'route' => '/loginCliente',
+			'controller' => 'ClientesController',
+			'action' => 'loginCliente'
+		);
+
+		$routes['validaLogin'] = array(
+			'route' => '/validaLogin',
+			'controller' => 'ClientesController',
+			'action' => 'validaLogin'
+		);
+
+		//CADASTRO CLIENTE
+		$routes['cadastrarCliente'] = array(
+			'route' => '/cadastrarCliente',
+			'controller' => 'ClientesController',
+			'action' => 'cadastrarCliente'
+		);
+
+		$routes['novoCadastro'] = array(
+			'route' => '/novoCadastro',
+			'controller' => 'ClientesController',
+			'action' => 'novoCadastro'
+		);
+
 		$this->setRoutes($routes);
 	}
 }
