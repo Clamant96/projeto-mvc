@@ -1,0 +1,141 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+	</head>
+	<body>
+    <div id="sideBar">
+        <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="/sobre_nos"><li>Sobre</li></a>
+            <a href="#"><li>Layouts</li></a>
+            <a href="#footer"><li>Contatos</li></a>
+
+            <a href="/produtos"><li>Produtos</li></a>
+            <a href="/clientes"><li>Usuarios</li></a>
+        </ul>
+    </div>
+
+    <div id="container">
+        <header>
+            <div id="headerMenu">
+                <div id="img">
+                    <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                        <path d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                        <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
+                    </svg>
+                </div>
+                <div id="logo">
+                    <img src="img/logoSite.png">
+                </div>
+                <div id="person">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+      
+        <!-- <div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        Brand 
+        <a class="navbar-brand" href="#">Sistema</a>
+        Links 
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="/">Incio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/produtos">Lista Produtos</a>
+            </li>
+            Dropdown 
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Cadastros
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/listaClientes">Lista Clientes</a>
+                <a class="dropdown-item" href="/produtos">Lista Produtos</a>
+                <a class="dropdown-item" href="/incluirProduto">Incluir Produto</a>
+            </div>
+            </li>  </ul>
+        </nav>
+        </div> -->
+
+        <div>
+          <?= $this->content() ?>
+        </div>
+
+        <section>
+            <div id="localidade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5371945121356!2d-46.74736508507254!3d-23.549142567026124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5601cc0edf29%3A0xc2c6dbc78f2aa3db!2sAv.%20Miguel%20Frias%20e%20Vasconcelos%2C%201200%20-%20Jaguar%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005345-000!5e0!3m2!1spt-BR!2sbr!4v1606159675930!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <div id="pergunta">
+                <form action="#" method="POST">
+                    <div id="texto">
+                        <p>Fale conosco</p>
+                        <textarea name="texto" cols="30" rows="10" placeholder="" ></textarea>
+                    </div>
+                    <div id="email">
+                        <p>E-mail</p>
+                        <div id="enviar">
+                            <input type="email" name="email" placeholder="E-mail" />
+                            <button type="submit">Enviar</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <div id="footer">
+                <div id="logo">
+                    <img src="img/logoSiteWhite.png">
+                </div>
+                <div id="menuFooter">
+                    <p>Menu</p>
+                    <ul>
+                      <a href="/"><li>Home</li></a>
+                      <a href="/sobre_nos"><li>Sobre</li></a>
+                      <a href="#"><li>Layouts</li></a>
+                    </ul>
+                </div>
+                <div id="contatoFooter">
+                    <p>Contato</p>
+                    <ul>
+                      <li>kevin.helpconnect@gmail.com</li>
+                      <li>cel.: (11) 9-7222-8292</li>
+                    </ul>
+                </div>
+                <div id="iconsFooter">
+                    <div id="icon">
+                        <img src="img/instagram.png">
+                    </div>
+                    <div id="icon">
+                        <img src="img/youtube.png">
+                    </div>
+                    <div id="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright &copy 2020 by <b>Help Connect</b></p>
+            </div>
+        </footer>	
+    </div>
+
+    <script src="js/javaScript.js"></script>
+</body>
+</html>

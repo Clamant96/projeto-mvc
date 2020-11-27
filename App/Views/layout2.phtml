@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Help Connect</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="sideBar">
+		<ul>
+			<a href="/"><li>Home</li></a>
+			<a href="/sobre_nos"><li>Sobre</li></a>
+			<a href="/layout"><li>Layouts</li></a>
+            <a href="#footer"><li>Contatos</li></a>
+
+            <a href="/produtos"><li>Produtos</li></a>
+            <a href="/clientes"><li>Usuarios</li></a>
+		</ul>
+	</div>
+
+	<div id="container">
+		<header>
+			<div id="headerMenu">
+				<div id="img">
+					<svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+						<path d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+						<path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
+					</svg>
+				</div>
+				<div id="logo">
+					<img src="img/logoSite.png">
+				</div>
+				<div id="person">
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+						<path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						<path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+					</svg>
+				</div>
+			</div>
+		</header>
+
+        <div>
+			<?= $this->content() ?>
+		</div>
+		
+        <footer>
+            <div id="footer">
+                <div id="logo">
+                    <img src="img/logoSiteWhite.png">
+                </div>
+                <div id="menuFooter">
+                    <p>Menu</p>
+                    <ul>
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>Sobre</li></a>
+                      <a href="#"><li>Layouts</li></a>
+                    </ul>
+                </div>
+                <div id="contatoFooter">
+                    <p>Contato</p>
+                    <ul>
+                      <li>kevin.helpconnect@gmail.com</li>
+                      <li>cel.: (11) 9-7222-8292</li>
+                    </ul>
+                </div>
+                <div id="iconsFooter">
+                    <div id="icon">
+                        <img src="img/instagram.png">
+                    </div>
+                    <div id="icon">
+                        <img src="img/youtube.png">
+                    </div>
+                    <div id="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright &copy 2020 by <b>Help Connect</b></p>
+            </div>
+        </footer>	
+    </div>
+
+    <script src="js/javaScript.js"></script>
+	
+</body>
+</html>

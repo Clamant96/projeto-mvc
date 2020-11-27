@@ -1,0 +1,56 @@
+<!-- <h1>Acesso</h1>
+<hr />
+    <a href="/menuPrincipal">Acesso</a>
+<br> -->
+
+
+<section>
+    <div id="conteudo">
+        <div id="apresentacao">
+            <h1>Desenvolvimento Front end</h1>
+            <p>Realizamos o desenvolvimento de seu site, com base em suas ideias. Entre em contato e faca uma contacao conosto.</p>
+            <div id="botao">
+                <a href="#">
+                    <div id="button">Saiba Mais</div>
+                </a>
+            </div>
+        </div>
+        <div id="img">
+            <img src="img/imgservices.png">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div id="produtos">
+        <?php
+            foreach($this->view->dados as $indice => $produto) {
+                echo "
+                    <div id=\"card\">
+                        <div id=\"img\">
+                            <img src=\"img/layout_teste.jpg\">
+                        </div>
+
+                        <div id=\"produto\">
+                            <h1>"
+                                . $produto["nome"] .
+                            "</h1>
+                        </div>
+
+                        <div id=\"produto\">
+                            <p>"
+                                . $produto["descricao"] .
+                            "</p>
+                        </div>
+
+                        <div id=\"produto\">
+                            <h2>R$ "
+                                . $produto["preco"] .
+                            "</h2>
+                        </div>
+                    </div>
+                ";
+            }
+        ?>
+    </div>
+</section>

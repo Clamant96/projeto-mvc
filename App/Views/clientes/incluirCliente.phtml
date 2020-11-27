@@ -1,0 +1,78 @@
+    <!-- <div class="container">
+        <h2>Adicionar Produto</h2>
+        <form action="/salvarProduto" method="post">
+        	<input type="hidden" class="form-control" id="Id" placeholder="Digite a id" name="id" value="0">
+            
+            <div class="form-group">
+                <label for="nome">Descricao:</label>
+                <input type="text" class="form-control" id="Descricao" placeholder="Digite a descricao" name="descricao">
+            </div>
+            <div class="form-group">
+                <label for="email">Preço:</label>
+                <input type="text" class="form-control" id="Valor" placeholder="Digite o valor" name="preco">
+            </div>
+           <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div> -->
+
+
+<!-- <section>
+    <div id="form">
+        <form action="/salvarProduto" method="post">
+        	<input type="hidden" id="Id" placeholder="Digite a id" name="id" value="0">
+            <div id="bloco">
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="Nome" name="nome">
+            </div>
+            <div id="bloco">
+                <label for="descricao">Descricao:</label>
+                <input type="text" placeholder="Descricao do Produto" name="descricao">
+            </div>
+            <div id="bloco">
+                <label for="preco">Preço:</label>
+                <input type="text" placeholder="Valor" name="preco">
+            </div>
+           <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section> -->
+
+<section>
+    <div id="telaCadastro">
+        <div id="logo">
+            <div id="imagem">
+                <img src="img/logoSite.png" alt="Help Connect">
+            </div>
+            <p>Seja Bem-Vindo</p>
+        </div>
+        <form id="form" action="/salvarCliente" method="POST">
+            <div id="container">
+                <div style="display:none;"> <!-- DEIXA O ID INVISIVEL PARA O USUARIO -->
+                    <p>ID</p>
+                    <input type="hiddem" name="id" value="0">
+                </div>
+                <div id="nome">
+                    <p>Nome Produto</p>
+                    <input type="text" name="nome" placeholder="Nome"/>
+                </div>
+                <div id="email">
+                    <p>Descricao</p>
+                    <input type="text" name="email" placeholder="E-mail"/>
+                </div>
+                <div id="senha">
+                    <p>Senha</p>
+                    <input type="text" name="senha" placeholder="Senha"/>
+                </div>
+                <div id="senha">
+                    <p>Situação: digite 0 ou 1</p>
+                    <input type="number" name="situacao" min="0" max="1" maxlength="1" placeholder="Situacao"/>
+                </div>
+                <div id="botoes">
+                    <div id="cadastro">
+                        <button type="submit">Incluir</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
