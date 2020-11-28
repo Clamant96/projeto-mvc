@@ -24,11 +24,13 @@ class ProdutosController extends Action {
 		$nome = $_POST["nome"];
         $descricao = $_POST["descricao"];
 		$preco = $_POST["preco"];
+		$img = $_POST["img"];
 		$produto = Container::getModel('Produto');
 		$produto->setId($id);
 		$produto->setNome($nome);
 		$produto->setDescricao($descricao);
 		$produto->setPreco($preco);
+		$produto->setImg($img);
         $produto->salvarProduto($produto); 
 		$this->listaProdutos();
 	}

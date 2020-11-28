@@ -47,6 +47,38 @@
                 echo "
                     <div id=\"card\">
                         <div id=\"img\">
+                            <img src=\"img/". $produto["img"] ."\">
+                        </div>
+
+                        <button class=\"collapsible\">Nome</button>
+                        <div class=\"content\">
+                            <div id=\"produto\">
+                                <h1>"
+                                    . $produto["nome"] .
+                                "</h1>
+                            </div>
+                        </div>
+
+                        <button class=\"collapsible\">Descrição</button>
+                        <div class=\"content\">
+                            <div id=\"produto\">
+                                <p>"
+                                . $produto["descricao"] .
+                                "</p>
+                            </div>
+                        </div>
+
+                        <button class=\"collapsible\">Preço</button>
+                        <div class=\"content\">
+                            <div id=\"produto\">
+                                <h2>R$ "
+                                . $produto["preco"] .
+                                "</h2>
+                            </div>
+                        </div>
+
+                        <button class=\"collapsible\">Gerenciar</button>
+                        <div class=\"content\">
                             <div id=\"opcoes\">
                                 <a href='/alterarProduto?id=" . $produto["id"] . "'>
                                     <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-pencil-square\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -60,25 +92,6 @@
                                     </svg>
                                 </a>
                             </div>
-                            <img src=\"img/layout_teste.jpg\">
-                        </div>
-
-                        <div id=\"produto\">
-                            <h1>"
-                                . $produto["nome"] .
-                            "</h1>
-                        </div>
-
-                        <div id=\"produto\">
-                            <p>"
-                                . $produto["descricao"] .
-                            "</p>
-                        </div>
-
-                        <div id=\"produto\">
-                            <h2>R$ "
-                                . $produto["preco"] .
-                            "</h2>
                         </div>
                     </div>
                 ";

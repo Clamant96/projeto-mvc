@@ -607,6 +607,170 @@ html, body {
 
 }
 
+/*CARD COLLAPSIBLE*/
+#container section #produtos #card .collapsible {
+    background-color: var(--text-purple);
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 2%;
+
+    width: 100%;
+    margin: 0% 1% 1% 0%;
+
+    border: none;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+
+}
+
+#container section #produtos #card .collapsible:after {
+    content: '\002B';
+
+    color: var(--background-body);
+
+    font-weight: bold;
+
+    float: right;
+
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\2212";
+
+}
+
+#container section #produtos #card .content {
+    padding: 0 18px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #produtos #card .content #produto {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #produtos #card .content #produto h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container section #produtos #card .content #opcoes a {
+    width: 100%;
+    height: auto;
+
+    /* background-color: #f9f9f9; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: default;
+
+}
+
+#container section #produtos #card .content #opcoes a svg {
+    width: 15%;
+    height: auto;
+
+    /* background-color: darkcyan; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+
+    transition: color, .5s;
+
+    cursor: pointer;
+
+}
+
+#container section #produtos #card .content #opcoes a svg:hover {
+    color: var(--text-gray);
+
+}
+
 /*CLIENTES*/
 
 #container section #clientes {
@@ -633,8 +797,6 @@ html, body {
     height: auto;
 
     flex: 1;
-
-    box-shadow: 0px 3px 5px -3px var(--box-shadown);
 
 }
 
@@ -714,6 +876,170 @@ html, body {
     text-align: right;
 
     /* background-color: blueviolet; */
+
+}
+
+/*CARD COLLAPSIBLE*/
+#container section #clientes #card .collapsible {
+    background-color: var(--text-purple);
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 2%;
+
+    width: 100%;
+    margin: 0% 1% 1% 0%;
+
+    border: none;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+
+}
+
+#container section #clientes #card .collapsible:after {
+    content: '\002B';
+
+    color: var(--background-body);
+
+    font-weight: bold;
+
+    float: right;
+
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\2212";
+
+}
+
+#container section #clientes #card .content {
+    padding: 0 18px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #clientes #card .content #produto {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #clientes #card .content #produto h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #produto p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #produto h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container section #clientes #card .content #opcoes a {
+    width: 100%;
+    height: auto;
+
+    /* background-color: #f9f9f9; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: default;
+
+}
+
+#container section #clientes #card .content #opcoes a svg {
+    width: 15%;
+    height: auto;
+
+    /* background-color: darkcyan; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+
+    transition: color, .5s;
+
+    cursor: pointer;
+
+}
+
+#container section #clientes #card .content #opcoes a svg:hover {
+    color: var(--text-gray);
 
 }
 

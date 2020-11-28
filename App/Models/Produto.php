@@ -5,7 +5,8 @@ class Produto {
 	protected $id; 
 	protected $nome;
     protected $descricao; 
-    protected $preco; 
+	protected $preco; 
+	protected $img; 
 
 	protected $db;
 
@@ -36,25 +37,32 @@ class Produto {
     }
     public function getPreco() {
     	return $this->preco;
+	}
+	
+	public function setImg($img) {
+    	$this->img = $img; 
+    }
+    public function getImg() {
+    	return $this->img;
     }
 
 	public function getProdutos() {
-		$query = "select id, nome, descricao, preco from tb_produtos";
+		$query = "select id, nome, descricao, preco, img from tb_produtos";
 		return $this->db->query($query)->fetchAll();
 	}
 
 	public function itemProdutos($id) {
 		
-		$query = "select id, nome, descricao, preco from tb_produtos where id =".$id;
+		$query = "select id, nome, descricao, preco, img from tb_produtos where id =".$id;
 		return $this->db->query($query)->fetchAll();
 	}
 
 	public function salvarProduto($produto) {
        if ($this->getId()==0) {
-		   $query = "insert into tb_produtos (nome, descricao, preco) values('".$produto->getNome()."','".$produto->getDescricao()."',".$produto->getPreco().")";
+		   $query = "insert into tb_produtos (nome, descricao, preco, img) values('".$produto->getNome()."','".$produto->getDescricao()."','".$produto->getPreco()."',".$produto->getImg().")";
 	    }
 	    else  {
-		   $query = "update tb_produtos set nome = '".$produto->getNome()."', descricao = '".$produto->getDescricao()."', preco = ".$produto->getPreco()." where id = ".$produto->getId();
+		   $query = "update tb_produtos set nome = '".$produto->getNome()."', descricao = '".$produto->getDescricao()."', preco = '".$produto->getPreco()."', img = ".$produto->getImg()." where id = ".$produto->getId();
 	    } 
 		return $this->db->query($query)->fetchAll();
 	}
