@@ -93,7 +93,34 @@ class ClientesController extends Action {
 		$produtos = $produto->getProdutos();
 		$this->view->dados = $produtos;
 
-		$this->render('../index/index', 'layout2');
+		$this->render('../index/index', 'layout1');
+	}
+
+	public function novoLogin() {
+		$email = $_POST["email"];
+		$senha = $_POST["senha"];
+		$cliente = Container::getModel('Cliente');
+		$cliente->setEmail($email);
+		$cliente->setSenha($senha);
+		$clientes = $cliente->validarUsuario($cliente, $cliente);
+		$this->view->dados = $clientes;
+
+		if($clientes==true){
+			echo "
+				<script language=javascript>
+					alert( 'Login efetuado com sucesso.');
+				</script>
+			";
+			$this->index();
+        }else{
+			echo "
+				<script language=javascript>
+					alert( 'Seu usuário não foi identificado, cadastre-se ou certifique-se de que seu e-mail e senha estão digitados corretamente.' );
+				</script>
+			";
+			$this->cadastrarCliente();
+        }
+		
 	}
 
 }

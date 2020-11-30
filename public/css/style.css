@@ -31,6 +31,7 @@ html, body {
     --text-white: #ffffff;
     --text-black: #000000;
     --text-purple: #38095c;
+    --text-purple-tranparent: #38095c9a;
     --text-gray: #919496;
 
     --box-shadown: #262626;
@@ -618,7 +619,7 @@ html, body {
     padding: 2%;
 
     width: 100%;
-    margin: 0% 1% 1% 0%;
+    margin: 1% 0% 0% 0%;
 
     border: none;
 
@@ -717,6 +718,59 @@ html, body {
     /* background-color: blueviolet; */
 
 }
+
+/*H1, P, H2 - INDEX*/
+#container section #produtos #card .content #produto #h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto #p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto #h2 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+/*-----------------*/
 
 #container section #produtos #card .content #opcoes {
     padding: 2%;
@@ -1388,42 +1442,6 @@ html, body {
 
 }
 
-#container section #telaCadastro #logo {
-    width: 20%;
-    height: auto;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-#container section #telaCadastro #logo p {
-    width: 100%;
-    height: auto;
-
-    text-align: center;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    color: var(--text-purple);
-
-}
-
-#container section #telaCadastro #logo #imagem {
-    width: 70%;
-    height: auto;
-
-}
-
-#container section #telaCadastro #logo #imagem img {
-    width: 100%;
-    height: auto;
-
-}
-
 #container section #telaCadastro #form {
     width: 20%;
     height: auto;
@@ -1602,6 +1620,385 @@ html, body {
 }
 
 #container section #telaCadastro #form #container #botoes #cadastro button:hover{
+    box-shadow: 0px 0px 0px 0px var(--box-shadown);
+
+    color: var(--text-gray);
+
+}
+
+/*MODAL - CADASTRO / LOGIN*/
+#container .modal {
+    display: none; /* Hidden by default */
+    
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    
+    padding-top: 100px; /* Location of the box */
+    
+    left: 0;
+    top: 0;
+    
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    
+    overflow: auto; /* Enable scroll if needed */
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: var(--text-purple-tranparent); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+#container .modal .modal-content {
+    position: relative;
+    
+    background-color: var(--background-body);
+    
+    margin: auto;
+    padding: 0;
+    
+    width: 80%;
+    height: auto;
+
+    border-radius: 0px 0px 15px 15px;
+    
+    box-shadow: 0px 3px 5px -1px var(--box-shadown);
+    
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0;
+    
+    } 
+    to {
+        top:0; 
+        opacity:1;
+    
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0;
+    
+    }
+    to {
+        top:0; 
+        opacity:1;
+    
+    }
+}
+
+/* The Close Button */
+#container .modal .modal-content .modal-header .close {
+    color: var(--text-white);
+
+    float: right;
+
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+#container .modal .modal-content .modal-header .close:hover, .close:focus {
+    color: var(--text-gray);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: color, .5s;
+}
+
+#container .modal .modal-content .modal-header {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    background-color: var(--text-purple);
+
+    color: var(--text-white);
+
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+/*CADASTRO / LOGIN - PERSON*/
+#container .modal .modal-content section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: aqua; */
+
+}
+
+#container .modal .modal-content section hr {
+    width: 0%;
+    height: 50vh;
+
+    background-color: var(--text-purple);
+
+    border: 1px solid var(--text-purple);
+
+}
+
+#container .modal .modal-content section #telaCadastro {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo {
+    width: 20%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo p {
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--text-purple);
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo #imagem {
+    width: 70%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo #imagem img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    color: var(--text-purple);
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    /* background-color: var(--background-header); */
+
+    border-radius: 10px;
+
+    background-image: url(../img/backgroundCompleto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #nome {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #nome p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-purple);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #nome input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .5s;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-purple);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .5s;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-purple);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .2s;
+
+}
+
+/* BOTOES */
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    /*background-color: cadetblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #cadastro{
+    width: 80%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #cadastro button {
+    padding: 4%;
+    width: 92%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black);
+
+    background-color: var(--background-body);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border-radius: 5px;
+
+    transition: background-color, box-shadow, color, .5s;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #cadastro button:hover{
     box-shadow: 0px 0px 0px 0px var(--box-shadown);
 
     color: var(--text-gray);

@@ -111,6 +111,12 @@ class Route extends Bootstrap {
 			'action' => 'novoCadastro'
 		);
 
+		$routes['autenticacao'] = array(
+			'route' => '/autenticacao',
+			'controller' => 'ClientesController',
+			'action' => 'novoLogin'
+		);
+
 		$this->setRoutes($routes);
 	}
 }

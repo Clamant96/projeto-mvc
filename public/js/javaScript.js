@@ -41,3 +41,22 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+/*MODAL - CADASTRO / LOGIN*/
+var modal = document.getElementById("modal-login-cadastro");
+var person = document.getElementById("person");
+var span = document.getElementsByClassName("close")[0];
+
+person.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
