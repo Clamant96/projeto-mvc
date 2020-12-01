@@ -54,6 +54,12 @@ class Route extends Bootstrap {
 			'action' => 'excluirProduto'
 		);
 
+		$routes['exibirProduto'] = array(
+			'route' => '/exibirProduto',
+			'controller' => 'ProdutosController',
+			'action' => 'exibirProduto'
+		);
+
 // clientes 
 
 		$routes['clientes'] = array(

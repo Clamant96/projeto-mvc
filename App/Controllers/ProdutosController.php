@@ -49,5 +49,14 @@ class ProdutosController extends Action {
 		$produtos = $produto->excluirProduto($id);
 		$this->listaProdutos();
 	}
+
+	public function exibirProduto() {
+        $id = $_GET["id"];
+		$produto = Container::getModel('Produto');
+		$produtos = $produto->itemProdutos($id);
+		$this->view->dados = $produtos;
+		$this->render('exibirProduto', 'layout1');
+	}
+
 }
 ?>

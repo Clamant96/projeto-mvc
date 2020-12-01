@@ -27,9 +27,11 @@
             foreach($this->view->dados as $indice => $produto) {
                 echo "
                     <div id=\"card\">
-                        <div id=\"img\">
-                            <img src=\"img/". $produto["img"] ."\">
-                        </div>
+                        <a href='/exibirProduto?id=" . $produto["id"] . "'>
+                            <div id=\"img\">
+                                <img src=\"img/". $produto["img"] ."\">
+                            </div>
+                        </a>
 
                         <button class=\"collapsible\">Saiba Mais</button>
                         <div class=\"content\">
