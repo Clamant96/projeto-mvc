@@ -55,7 +55,7 @@ class ProdutosController extends Action {
 		$produto = Container::getModel('Produto');
 		$produtos = $produto->itemProdutos($id);
 		$this->view->dados = $produtos;
-		$this->render('exibirProduto', 'layout1');
+		$this->render('exibirProduto', 'layout2');
 	}
 
 }

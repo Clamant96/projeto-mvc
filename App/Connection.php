@@ -1,5 +1,6 @@
 <?php
 namespace App;
+//session_start(); //INCLUIDO PARA TESTER A SESSAO
 class Connection {
 	public static function getDb() {
 		try {

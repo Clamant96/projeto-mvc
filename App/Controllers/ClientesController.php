@@ -105,20 +105,22 @@ class ClientesController extends Action {
 		$clientes = $cliente->validarUsuario($cliente, $cliente);
 		$this->view->dados = $clientes;
 
-		if($clientes==true){
+		if($clientes){
 			echo "
 				<script language=javascript>
 					alert( 'Login efetuado com sucesso.');
 				</script>
 			";
-			$this->index();
+
+			return $this->index();
         }else{
 			echo "
 				<script language=javascript>
 					alert( 'Seu usuário não foi identificado, cadastre-se ou certifique-se de que seu e-mail e senha estão digitados corretamente.' );
 				</script>
 			";
-			$this->cadastrarCliente();
+
+			return $this->index();
         }
 		
 	}

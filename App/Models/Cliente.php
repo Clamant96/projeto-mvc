@@ -77,9 +77,11 @@ class Cliente {
 
     /*METODO DE VALIDA LOGIN*/
     public function validarUsuario($email, $senha) {
-		$query = "SELECT email, senha FROM tb_clientes WHERE email = '".$email->getEmail()."' AND senha = '".$senha->getSenha()."'";
+        $query = "SELECT email, senha FROM tb_clientes WHERE email = '".$email->getEmail()."' AND senha = '".$senha->getSenha()."'";
         return $this->db->query($query)->fetchAll();
+
     }
 
-} 
+}
+
 ?>
