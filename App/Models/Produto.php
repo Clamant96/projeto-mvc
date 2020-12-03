@@ -59,10 +59,10 @@ class Produto {
 
 	public function salvarProduto($produto) {
        if ($this->getId()==0) {
-		   $query = "insert into tb_produtos (nome, descricao, preco, img) values('".$produto->getNome()."','".$produto->getDescricao()."','".$produto->getPreco()."',".$produto->getImg().")";
+		   $query = "INSERT INTO tb_produtos (nome, descricao, preco, img) VALUES ('".$produto->getNome()."','".$produto->getDescricao()."','".$produto->getPreco()."','".$produto->getImg()."')";
 	    }
 	    else  {
-		   $query = "update tb_produtos set nome = '".$produto->getNome()."', descricao = '".$produto->getDescricao()."', preco = '".$produto->getPreco()."', img = ".$produto->getImg()." where id = ".$produto->getId();
+		   $query = "UPDATE tb_produtos SET nome = '".$produto->getNome()."', descricao = '".$produto->getDescricao()."', preco = '".$produto->getPreco()."', img = '".$produto->getImg()."' WHERE id = ".$produto->getId();
 	    } 
 		return $this->db->query($query)->fetchAll();
 	}

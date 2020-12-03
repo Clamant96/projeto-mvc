@@ -9,26 +9,31 @@
                     <?php echo $this->view->dados[0]["nome"] ?>
                 </div> -->
                 <div id="conteudoProduto">
-                    <div id="dadosImg">
-                        <div id="marcaProduto">
-                            <p>
-                                <img src="img/logoSite.png">
-                            </p>
-                            <p>Avaliações 0</p>
-                        </div>
-                        <div id="hr">
-                            <hr />
-                        </div>
-                        <div id="nome">
-                            <p>
-                                <?php echo $this->view->dados[0]["nome"] ?>
-                            </p>
-                        </div>
-                        <div id="img">
-                            <img src="img/<?php echo $this->view->dados[0]["img"] ?>">
+                    <div id="dadosProduto">
+                        <div id="dadosImg">
+                            <div id="marcaProduto">
+                                <p>
+                                    <img src="img/logoSite.png">
+                                </p>
+                                <p>Avaliações 0</p>
+                            </div>
+                            <div id="hr">
+                                <hr />
+                            </div>
+                            <div id="nome">
+                                <p>
+                                    <?php echo $this->view->dados[0]["nome"] ?>
+                                </p>
+                            </div>
+                            <div id="img">
+                                <img src="img/<?php echo $this->view->dados[0]["img"] ?>">
+                            </div>
                         </div>
                         <div id="descricao">
                             <h1>Descrição do Produto</h1>
+                            <div id="hr">
+                                <hr />
+                            </div>
                             <p><?php echo $this->view->dados[0]["descricao"] ?></p>
                         </div>
                     </div>
@@ -91,7 +96,7 @@
                                 <?php 
                                     for($contador = 1; $contador <= 12; $contador++) {
                                         $total = $this->view->dados[0]["preco"] / $contador;
-                                        echo "<p>". $contador ." x R$" . number_format($total, 2, '.', '') ." sem juros </p>";
+                                        echo "<p>". $contador ." x R$ " . number_format($total, 2, '.', '') ." sem juros </p>";
 
                                     }
                                 ?>

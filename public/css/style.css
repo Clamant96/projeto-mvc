@@ -2007,6 +2007,41 @@ html, body {
 
 }
 
+#container section #telaCadastro #form #container #img {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container section #telaCadastro #form #container #img p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #img input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    transition: background-color, .2s;
+
+}
+
 /* BOTOES */
 
 #container section #telaCadastro #form #container #botoes {
@@ -2645,8 +2680,27 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto {
     width: 59%;
+    height: auto;
+
+    /* border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body); */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg {
+    padding: 2%;
+    margin: 1%;
+
+    width: 94%;
     height: auto;
 
     border: 1px solid var(--text-light-gray);
@@ -2656,7 +2710,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #hr {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #hr {
     width: 100%;
     height: auto;
 
@@ -2666,7 +2720,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #hr hr {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #hr hr {
     width: 90%;
     height: auto;
 
@@ -2677,7 +2731,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #marcaProduto {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto {
     width: 100%;
     height: auto;
 
@@ -2689,7 +2743,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #marcaProduto p {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto p {
     width: 50%;
     height: auto;
 
@@ -2701,7 +2755,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #marcaProduto p img {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto p img {
     padding: 5%;
 
     width: 40%;
@@ -2709,7 +2763,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #img {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #img {
     padding: 0% 5% 0% 5%;
 
     width: 90%;
@@ -2721,7 +2775,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #img img {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #img img {
     width: 80%;
     height: auto;
 
@@ -2729,7 +2783,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #nome {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #nome {
     padding: 2% 2% 2% 0%;
 
     width: 96%;
@@ -2742,7 +2796,7 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #nome p {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #nome p {
     width: 70%;
     height: auto;
 
@@ -2753,10 +2807,11 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #descricao {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao {
     padding: 2%;
+    margin: 1%;
 
-    width: 96%;
+    width: 94%;
     height: auto;
 
     display: flex;
@@ -2764,12 +2819,17 @@ html, body {
     flex-direction: column;
     justify-content: center;
 
+    border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body);
+
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #descricao h1 {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao h1 {
     padding: 1%;
 
-    width: 68%;
+    width: 78%;
     height: auto;
 
     font-size: 20px;
@@ -2779,16 +2839,37 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #dadosImg #descricao p {
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao p {
     padding: 1%;
 
-    width: 68%;
+    width: 78%;
     height: auto;
 
     font-size: 14px;
     font-weight: 400;
 
     color: var(--text-black);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao #hr {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao #hr hr {
+    width: 90%;
+    height: auto;
+
+    border-top: 1px solid var(--text-light-gray);
+    border-bottom: 0px solid var(--text-light-gray);
+    border-left: 0px solid var(--text-light-gray);
+    border-right: 0px solid var(--text-light-gray);
 
 }
 
