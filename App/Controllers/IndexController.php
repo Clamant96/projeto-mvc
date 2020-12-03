@@ -35,7 +35,7 @@ class IndexController extends Action {
 		
 		@$this->view->dados = $informacoes;*/
 
-		$this->render('sobreNos', 'layout2');
+		$this->render('sobreNos', 'layout1');
 	}
 
 }

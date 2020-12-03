@@ -1,29 +1,29 @@
-    <!-- </div>
-       <div class="container">
-        <h2>Alterar Produto</h2>
-        <form action="/salvarProduto" method="post">
-            <div class="form-group">
-                <input type="hidden" class="form-control" id="Id" placeholder="Digite a id" name="id" value="<?php echo $this->view->dados[0]["id"] ?>">
-            </div>
-            <div class="form-group">
-                <label for="nome">Descricao:</label>
-                <input type="text" class="form-control" id="Descricao" placeholder="Digite a descricao" name="descricao" value="<?php echo $this->view->dados[0]["descricao"] ?>">
-            </div>
-            <div class="form-group">
-                <label for="email">Preço:</label>
-                <input type="text" class="form-control" id="Valor" placeholder="Digite o valor" name="preco" value="<?php echo $this->view->dados[0]["preco"] ?>">
-            </div>
-           <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div> -->
+<!-- </div>
+    <div class="container">
+    <h2>Alterar Produto</h2>
+    <form action="/salvarProduto" method="post">
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="Id" placeholder="Digite a id" name="id" value="<?php echo $this->view->dados[0]["id"] ?>">
+        </div>
+        <div class="form-group">
+            <label for="nome">Descricao:</label>
+            <input type="text" class="form-control" id="Descricao" placeholder="Digite a descricao" name="descricao" value="<?php echo $this->view->dados[0]["descricao"] ?>">
+        </div>
+        <div class="form-group">
+            <label for="email">Preço:</label>
+            <input type="text" class="form-control" id="Valor" placeholder="Digite o valor" name="preco" value="<?php echo $this->view->dados[0]["preco"] ?>">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div> -->
 
-    <section>
+<section>
     <div id="telaCadastro">
         <div id="logo">
             <div id="imagem">
                 <img src="img/logoSite.png" alt="Help Connect">
+                <p>Seja Bem-Vindo</p>
             </div>
-            <p>Seja Bem-Vindo</p>
         </div>
         <form id="form" action="/salvarCliente" method="POST">
             <div id="container">
@@ -48,8 +48,17 @@
                     <input type="number" name="situacao" min="0" max="1" maxlength="1" placeholder="Situacao" value="<?php echo $this->view->dados[0]["situacao"] ?>"/>
                 </div>
                 <div id="botoes">
-                    <div id="cadastro">
-                        <button type="submit">Alterar</button>
+                    <div id="avancar">
+                        <button type="submit">
+                            <div id="icon">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                </svg>
+                            </div>
+                            <p>Alterar</p>
+                        </button>
                     </div>
                 </div>
             </div>
