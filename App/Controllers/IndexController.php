@@ -8,7 +8,8 @@ use MF\Model\Container;
 
 //os models
 use App\Models\Produto;
-
+use App\Models\Cliente;
+use App\Models\Login;
 
 class IndexController extends Action {
 
@@ -28,12 +29,17 @@ class IndexController extends Action {
 
 
 	public function sobreNos() {
+		$produto = Container::getModel('Produto');	
+		$produtos = $produto->getProdutos();
+		$this->view->dados = $produtos;
 
-		/*$info = Container::getModel('Info');
+		$cliente = Container::getModel('Cliente');	
+		$clientes = $cliente->getClientes();
+		$this->view->dados = $clientes;
 
-		$informacoes = $info->getInfo();
-		
-		@$this->view->dados = $informacoes;*/
+		$login = Container::getModel('Login');	
+		$logins = $login->getLogin();
+		$this->view->dados = $logins;
 
 		$this->render('sobreNos', 'layout1');
 	}

@@ -1,6 +1,9 @@
 <?php
 
 $login = $_SESSION['nomeLogin'];
+$email = $_SESSION['emailLogin'];
+$senha = $_SESSION['senhaLogin'];
+$situacao = $_SESSION['situacaoUsuario'];
 
 ?>
 <!DOCTYPE html>
@@ -16,11 +19,18 @@ $login = $_SESSION['nomeLogin'];
 		<ul>
 			<a href="/"><li>Home</li></a>
 			<a href="/sobre_nos"><li>Sobre</li></a>
-			<a href="/layout"><li>Layouts</li></a>
+			<a href="#"><li>Layouts</li></a>
             <a href="#footer"><li>Contatos</li></a>
-
-            <a href="/produtos"><li>Produtos</li></a>
-            <a href="/clientes"><li>Usuarios</li></a>
+            <?php
+                if($situacao == 1) {
+                    echo "
+                        <a href=\"/produtos\"><li>Produtos</li></a>
+                        <a href=\"/clientes\"><li>Usuarios</li></a>
+                        <a href=\"/mensagens\"><li>Mensagem</li></a>
+                    
+                    ";
+                }
+            ?>
 		</ul>
 	</div>
 
@@ -38,7 +48,6 @@ $login = $_SESSION['nomeLogin'];
 					<img src="img/logoSite.png">
 				</div>
 				<div id="person">
-                    <?php echo "Seja Bem-Vindo: ". $login?>
 					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 						<path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
 						<path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -46,7 +55,82 @@ $login = $_SESSION['nomeLogin'];
 					</svg>
 				</div>
 			</div>
-		</header>
+        </header>
+        
+        <!-- MODAL CADASTRO / LOGIN link: id="person" -->
+        <div id="modal-login-cadastro" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Seja Bem-Vindo <?php echo $login; ?></h2>
+                </div>
+                <section>
+                    <div id="telaCadastro">
+                        <form id="form" action="/logout" method="POST">
+                            <h1>Meu Perfil</h1>
+                            <div id="container">
+                                <div id="dados">
+                                    <p>Nome</p>
+                                    <div id="perfil">
+                                        <p><?php echo $login; ?></p>
+                                        <a href="#">
+                                            <div id="icon">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="dados">
+                                    <p>E-mail</p>
+                                    <div id="perfil">
+                                        <p><?php echo $email; ?></p>
+                                        <a href="#">
+                                            <div id="icon">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="dados">
+                                    <p>Senha</p>
+                                    <div id="perfil">
+                                        <p><?php echo $senha; ?></p>
+                                        <a href="#">
+                                            <div id="icon">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="botoes">
+                                    <div id="avancar">
+                                        <button type="submit">
+                                            <div id="icon">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                                                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                                    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                                </svg>
+                                            </div>
+                                            <p>Logout</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
 
         <div>
 			<?= $this->content() ?>
