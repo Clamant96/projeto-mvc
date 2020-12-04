@@ -1,5 +1,6 @@
 <?php
 namespace App;
+session_start();
 class Connection {
 	public static function getDb() {
 		try {

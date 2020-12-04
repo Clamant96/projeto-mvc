@@ -123,6 +123,50 @@ class Route extends Bootstrap {
 			'action' => 'novoLogin'
 		);
 
+		//MENSAGEM
+		$routes['mensagens'] = array(
+			'route' => '/mensagens',
+			'controller' => 'ClientesController',
+			'action' => 'listaMensagens'
+		);
+
+		$routes['mensagem'] = array(
+			'route' => '/mensagem',
+			'controller' => 'ClientesController',
+			'action' => 'mensagem'
+		);
+
+		/*LOGIN*/
+		$routes['logar'] = array(
+			'route' => '/logar',
+			'controller' => 'LoginController',
+			'action' => 'logar'
+		);
+
+		$routes['login'] = array(
+			'route' => '/login',
+			'controller' => 'LoginController',
+			'action' => 'validaLogin'
+		);
+
+		$routes['verificaSituacao'] = array(
+			'route' => '/verificaSituacao',
+			'controller' => 'LoginController',
+			'action' => 'validaLogeed'
+		);
+
+		$routes['logout'] = array(
+			'route' => '/logout',
+			'controller' => 'LoginController',
+			'action' => 'logout'
+		);
+
+		$routes['index'] = array(
+			'route' => '/index',
+			'controller' => 'LoginController',
+			'action' => 'index'
+		);
+
 		$this->setRoutes($routes);
 	}
 }

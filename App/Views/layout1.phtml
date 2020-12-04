@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
+    $login = $_SESSION['nomeLogin'];
+    $email = $_SESSION['emailLogin'];
+    $senha = $_SESSION['senhaLogin'];
+    $situacao = $_SESSION['situacaoUsuario'];
+?>
 <html>
 	<head>
     <meta charset="utf-8">
@@ -11,9 +19,16 @@
             <a href="/sobre_nos"><li>Sobre</li></a>
             <a href="/cadastrarCliente"><li>Layouts</li></a>
             <a href="#footer"><li>Contatos</li></a>
-
-            <a href="/produtos"><li>Produtos</li></a>
-            <a href="/clientes"><li>Usuarios</li></a>
+            <?php
+                if($situacao == 1) {
+                    echo "
+                        <a href=\"/produtos\"><li>Produtos</li></a>
+                        <a href=\"/clientes\"><li>Usuarios</li></a>
+                        <a href=\"/mensagens\"><li>Mensagem</li></a>
+                    
+                    ";
+                }
+            ?>
         </ul>
     </div>
 
@@ -45,14 +60,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h2>Seja Bem-Vindo</h2>
+                    <h2>Seja Bem-Vindo <?php echo $login; ?></h2>
                 </div>
                 <section>
-                    <div id="telaCadastro">
+                    <!-- <div id="telaCadastro">
                         <form id="form" action="/novoCadastro" method="POST">
                             <h1>Cadastrar-se</h1>
                             <div id="container">
-                                <div style="display:none;"> <!-- DEIXA O ID INVISIVEL PARA O USUARIO -->
+                                <div style="display:none;">
                                     <p>ID</p>
                                     <input type="hiddem" name="id" value="0">
                                 </div>
@@ -86,19 +101,23 @@
                         </form>
                     </div>
 
-                    <hr />
+                    <hr /> -->
 
                     <div id="telaCadastro">
-                        <form id="form" action="/autenticacao" method="POST">
-                            <h1>Login</h1>
+                        <form id="form" action="/logout" method="POST">
+                            <h1>Meu Perfil</h1>
                             <div id="container">
+                                <div id="nome">
+                                    <p>Nome</p>
+                                    <input type="text" name="nome" placeholder="Nome" value="<?php echo $login; ?>" disabled/>
+                                </div>
                                 <div id="email">
                                     <p>E-mail</p>
-                                    <input type="text" name="email" placeholder="E-mail"/>
+                                    <input type="text" name="email" placeholder="E-mail" value="<?php echo $email; ?>" disabled/>
                                 </div>
                                 <div id="senha">
                                     <p>Senha</p>
-                                    <input type="text" name="senha" placeholder="Senha"/>
+                                    <input type="text" name="senha" placeholder="Senha" value="<?php echo $senha; ?>" disabled/>
                                 </div>
                                 <div id="botoes">
                                     <div id="avancar">
@@ -110,7 +129,7 @@
                                                     <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
                                                 </svg>
                                             </div>
-                                            <p>Login</p>
+                                            <p>Logout</p>
                                         </button>
                                     </div>
                                 </div>
@@ -133,10 +152,10 @@
 
         <section>
             <div id="pergunta">
-                <form action="#" method="POST">
+                <form action="/mensagem" method="POST">
                     <div id="texto">
                         <p>Fale conosco</p>
-                        <textarea name="texto" cols="30" rows="10" placeholder="" ></textarea>
+                        <textarea type="text" name="texto" cols="30" rows="10" placeholder="Digite aqui..." ></textarea>
                     </div>
                     <div id="email">
                         <p>E-mail</p>
@@ -190,3 +209,9 @@
     <script src="js/javaScript.js"></script>
 </body>
 </html>
+
+<?php 
+
+else: header("Location: /logar"); endif;
+
+?>

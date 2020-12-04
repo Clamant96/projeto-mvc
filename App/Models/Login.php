@@ -1,12 +1,12 @@
 <?php
 namespace App\Models;
-class Cliente {
+class Login {
 
     protected $id; 
     protected $nome;
     protected $email;
     protected $senha;
-    protected $situacao = 0;
+    protected $situacao;
     protected $texto;
 
     protected $db;
@@ -25,7 +25,7 @@ class Cliente {
     public function getNome() {
     	return $this->nome; 
     }
-    public function setNome($nome) { //VERIFICA SE FICA $id mesmo
+    public function setNome($nome) {
     	$this->nome = $nome; 
     }
 
@@ -57,12 +57,63 @@ class Cliente {
     	$this->texto = $texto; 
     }
 
-    public function getClientes() {
+    public function getLogin() {
         $query = "SELECT id, nome, email, senha, situacao FROM tb_clientes";
 		return $this->db->query($query)->fetchAll();
     }
 
-    public function itemCliente($id) {
+    public function login($email, $senha) {
+        $query = "SELECT * FROM tb_clientes WHERE email = :email AND senha = :senha";
+        $query = $this->db->prepare($query);
+        $query->bindValue("email", $email);
+        $query->bindValue("senha", $senha);
+        $teste = $query->execute();
+
+        //echo "Teste:". $teste;
+        //echo "Valor: ". $query->rowCount();
+
+        if($query->rowCount() > 0){
+            $dado = $query->fetch();
+
+            $_SESSION['idUser'] = $dado['id'];
+            $_SESSION['nomeLogin'] = $dado['nome'];
+            $_SESSION['emailLogin'] = $dado['email'];
+            $_SESSION['senhaLogin'] = $dado['senha'];
+            $_SESSION['situacaoUsuario'] = $dado['situacao'];
+
+            //echo "retornou verdadeiro";
+            return true;
+
+        }else{
+            //echo "retornou falso";
+            echo "
+                <script language=javascript>
+                    console.log( 'Login invalido.');
+                </script>
+            ";
+            return false;
+
+        }
+    }
+
+    public function logged($id){
+        $array = array();
+
+        $query = "SELECT nome FROM tb_clientes WHERE id = :id";
+        $query = $this->db->prepare($query);
+        $query->bindValue("id", $id);
+        $query->execute();
+
+        if($query->rowCount() > 0){
+            $array = $query->fetch();
+
+        }
+
+        return $array;
+
+    }
+
+    /*public function itemCliente($id) {
 		
 		$query = "SELECT id, nome, email, senha, situacao FROM tb_clientes WHERE id =".$id;
 		return $this->db->query($query)->fetchAll();
@@ -83,14 +134,12 @@ class Cliente {
         return $this->db->query($query)->fetchAll();
     }
 
-    /*METODO DE VALIDA LOGIN*/
     public function validarUsuario($cliente) {
         $query = "SELECT email, senha FROM tb_clientes WHERE email = '".$cliente->getEmail()."' AND senha = '".$cliente->getSenha()."'";
         return $this->db->query($query)->fetchAll();
 
     }
 
-    /*METODO SALVAR MENSAGEM*/
     public function getMensagem() {
         $query = "SELECT id, texto, email FROM tb_mensagem";
 		return $this->db->query($query)->fetchAll();
@@ -99,7 +148,7 @@ class Cliente {
     public function salvarMensagem($mensagem) {
         $query = "INSERT INTO tb_mensagem (texto, email) VALUES ('".$mensagem->getTexto()."','".$mensagem->getEmail()."')";
         return $this->db->query($query)->fetchAll();
-    }
+    }*/
 
 }
 

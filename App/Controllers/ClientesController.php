@@ -102,7 +102,7 @@ class ClientesController extends Action {
 		$cliente = Container::getModel('Cliente');
 		$cliente->setEmail($email);
 		$cliente->setSenha($senha);
-		$clientes = $cliente->validarUsuario($cliente, $cliente);
+		$clientes = $cliente->validarUsuario($cliente);
 		$this->view->dados = $clientes;
 
 		if($clientes){
@@ -123,6 +123,25 @@ class ClientesController extends Action {
 			return $this->index();
         }
 		
+	}
+
+	/*MENSAGEM*/
+
+	public function listaMensagens() {
+		$cliente = Container::getModel('Cliente');
+		$clientes = $cliente->getMensagem();
+		$this->view->dados = $clientes;
+		$this->render('listaMensagens', 'layout2');
+	}
+
+	public function mensagem() {
+		$texto = $_POST["texto"];
+		$email = $_POST["email"];
+		$mensagem = Container::getModel('Cliente');
+		$mensagem->setTexto($texto);
+		$mensagem->setEmail($email);
+		$mensagem->salvarMensagem($mensagem);
+		$this->index();
 	}
 
 }

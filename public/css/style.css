@@ -1817,22 +1817,22 @@ html, body {
 #container section #telaCadastro {
     padding: 5%;
 
-    width: 90%;
+    width: 40%;
     height: auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    /* background-color: turquoise; */
+
 }
 
 /*IMG - LOGO*/
 
-#container section #telaCadastro #logo {
+/*#container section #telaCadastro #logo {
     width: 30%;
     height: auto;
-
-    /* background-color: wheat; */
 
     display: flex;
     align-items: center;
@@ -1843,8 +1843,6 @@ html, body {
 #container section #telaCadastro #logo #imagem {
     width: 70%;
     height: auto;
-
-    /* background-color: yellow; */
 
     display: flex;
     align-items: center;
@@ -1857,8 +1855,6 @@ html, body {
     width: 80%;
     height: auto;
 
-    /* background-color: darkcyan; */
-
 }
 
 #container section #telaCadastro #logo #imagem p {
@@ -1869,13 +1865,37 @@ html, body {
 
     text-transform: uppercase;
 
-}
+}*/
 
 /*----------*/
 
+#container section #barra {
+    width: 0%;
+    height: 40vh;
+
+    border-bottom: 0px solid var(--text-blue-cart);
+    border-top: 0px solid var(--text-blue-cart);
+    border-left: 3px solid var(--text-blue-cart);
+    border-right: 0px solid var(--text-blue-cart);
+
+}
+
 #container section #telaCadastro #form {
-    width: 30%;
+    width: 100%;
     height: auto;
+
+}
+
+#container section #telaCadastro #form h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--text-blue-cart);
 
 }
 
@@ -2148,7 +2168,7 @@ html, body {
     
     z-index: 1; /* Sit on top */
     
-    padding-top: 100px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     
     left: 0;
     top: 0;
@@ -2257,7 +2277,7 @@ html, body {
 
 }
 
-/*CADASTRO / LOGIN - PERSON*/
+/*CADASTRO / LOGIN - PERSON - MODAL*/
 #container .modal .modal-content section {
     display: flex;
     align-items: center;
@@ -2283,7 +2303,7 @@ html, body {
 #container .modal .modal-content section #telaCadastro {
     padding: 1%;
 
-    width: 98%;
+    width: 48%;
     height: auto;
 
     display: flex;
@@ -2574,6 +2594,8 @@ html, body {
     border-radius: 0px 10px 10px 0px;
 
 }
+
+
 
 /*SECTION - EXIBIR*/
 #container section #exibir {
